@@ -1,0 +1,6 @@
+framework module Pods_TextNow_Chat_App {
+  umbrella header "Pods-TextNow Chat App-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>144174348892-e352fov5vbl9mlm8lirunnm2vddmn49h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.144174348892-e352fov5vbl9mlm8lirunnm2vddmn49h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAe4GN2fMS_e-Y6Bf_Op6DAP4TcbjXR7zA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>144174348892</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aarontreinish.TextNowChatApp</string>
+	<key>PROJECT_ID</key>
+	<string>textnow-chat-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>textnow-chat-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:144174348892:ios:95e9d1f4cc496555</string>
+	<key>DATABASE_URL</key>
+	<string>https://textnow-chat-app.firebaseio.com</string>
+</dict>
+</plist>

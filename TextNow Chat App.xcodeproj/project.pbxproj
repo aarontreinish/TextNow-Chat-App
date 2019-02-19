@@ -7,21 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211CC20B2214E1940028A25D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CC20A2214E1940028A25D /* AppDelegate.swift */; };
-		211CC20D2214E1940028A25D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CC20C2214E1940028A25D /* ViewController.swift */; };
+		06FD8C324F2993AA715BE1E8 /* Pods_TextNow_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149487F804F69DB5539A1246 /* Pods_TextNow_Chat_App.framework */; };
 		211CC2102214E1940028A25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CC20E2214E1940028A25D /* Main.storyboard */; };
 		211CC2122214E1950028A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2112214E1950028A25D /* Assets.xcassets */; };
 		211CC2152214E1950028A25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2132214E1950028A25D /* LaunchScreen.storyboard */; };
+		211CC2222214ECAF0028A25D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2212214ECAF0028A25D /* GoogleService-Info.plist */; };
+		2171A851221A5698000CA3E4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A850221A5698000CA3E4 /* Message.swift */; };
+		2171A86B221A62A7000CA3E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A862221A62A5000CA3E4 /* AppDelegate.swift */; };
+		2171A86C221A62A7000CA3E4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A863221A62A5000CA3E4 /* SignInViewController.swift */; };
+		2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A865221A62A5000CA3E4 /* InitialViewController.swift */; };
+		2171A86F221A62A7000CA3E4 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A866221A62A5000CA3E4 /* NewMessageViewController.swift */; };
+		2171A870221A62A7000CA3E4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A867221A62A6000CA3E4 /* CreateAccountViewController.swift */; };
+		2171A871221A62A7000CA3E4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A868221A62A6000CA3E4 /* MessagesViewController.swift */; };
+		2171A872221A62A7000CA3E4 /* NewMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A869221A62A6000CA3E4 /* NewMessageTableViewCell.swift */; };
+		2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */; };
+		217B093F2219042A0070DFA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B093E2219042A0070DFA8 /* Extensions.swift */; };
+		217D6E7122188EF2005BADDE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D6E7022188EF2005BADDE /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149487F804F69DB5539A1246 /* Pods_TextNow_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextNow_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CC2072214E1940028A25D /* TextNow Chat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TextNow Chat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		211CC20A2214E1940028A25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		211CC20C2214E1940028A25D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		211CC20F2214E1940028A25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		211CC2112214E1950028A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211CC2142214E1950028A25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211CC2162214E1950028A25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		211CC21E2214E5FF0028A25D /* TextNow Chat App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TextNow Chat App.entitlements"; sourceTree = "<group>"; };
+		211CC2212214ECAF0028A25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2171A850221A5698000CA3E4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2171A862221A62A5000CA3E4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2171A863221A62A5000CA3E4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2171A865221A62A5000CA3E4 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		2171A866221A62A5000CA3E4 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		2171A867221A62A6000CA3E4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2171A868221A62A6000CA3E4 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		2171A869221A62A6000CA3E4 /* NewMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageTableViewCell.swift; sourceTree = "<group>"; };
+		2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		217B093E2219042A0070DFA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		217D6E7022188EF2005BADDE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE7CBBEF9B3DC46ECFAE8746 /* Pods-TextNow Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.debug.xcconfig"; sourceTree = "<group>"; };
+		D44A581486231B1ACB360499 /* Pods-TextNow Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FD8C324F2993AA715BE1E8 /* Pods_TextNow_Chat_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				211CC2092214E1940028A25D /* TextNow Chat App */,
-				211CC2082214E1940028A25D /* Products */,
+				AA279CABEAC10F299D6BD285 /* Pods */,
+				82C58AB40E812AF6E629715B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,19 +76,82 @@
 				211CC2072214E1940028A25D /* TextNow Chat App.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		211CC2092214E1940028A25D /* TextNow Chat App */ = {
 			isa = PBXGroup;
 			children = (
-				211CC20A2214E1940028A25D /* AppDelegate.swift */,
-				211CC20C2214E1940028A25D /* ViewController.swift */,
+				2171A876221A6323000CA3E4 /* Controllers */,
+				2171A874221A630B000CA3E4 /* View */,
+				217B093D221904190070DFA8 /* Helpers */,
+				217D6E6D22188A2C005BADDE /* Model */,
+				211CC21E2214E5FF0028A25D /* TextNow Chat App.entitlements */,
+				2171A862221A62A5000CA3E4 /* AppDelegate.swift */,
 				211CC20E2214E1940028A25D /* Main.storyboard */,
 				211CC2112214E1950028A25D /* Assets.xcassets */,
 				211CC2132214E1950028A25D /* LaunchScreen.storyboard */,
 				211CC2162214E1950028A25D /* Info.plist */,
+				211CC2212214ECAF0028A25D /* GoogleService-Info.plist */,
+				211CC2082214E1940028A25D /* Products */,
 			);
 			path = "TextNow Chat App";
+			sourceTree = "<group>";
+		};
+		2171A874221A630B000CA3E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */,
+				2171A869221A62A6000CA3E4 /* NewMessageTableViewCell.swift */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		2171A876221A6323000CA3E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2171A865221A62A5000CA3E4 /* InitialViewController.swift */,
+				2171A867221A62A6000CA3E4 /* CreateAccountViewController.swift */,
+				2171A863221A62A5000CA3E4 /* SignInViewController.swift */,
+				2171A868221A62A6000CA3E4 /* MessagesViewController.swift */,
+				2171A866221A62A5000CA3E4 /* NewMessageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		217B093D221904190070DFA8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				217B093E2219042A0070DFA8 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		217D6E6D22188A2C005BADDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				217D6E7022188EF2005BADDE /* User.swift */,
+				2171A850221A5698000CA3E4 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82C58AB40E812AF6E629715B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				149487F804F69DB5539A1246 /* Pods_TextNow_Chat_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA279CABEAC10F299D6BD285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE7CBBEF9B3DC46ECFAE8746 /* Pods-TextNow Chat App.debug.xcconfig */,
+				D44A581486231B1ACB360499 /* Pods-TextNow Chat App.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 211CC2192214E1950028A25D /* Build configuration list for PBXNativeTarget "TextNow Chat App" */;
 			buildPhases = (
+				02F6D676F27B61F015937B5E /* [CP] Check Pods Manifest.lock */,
 				211CC2032214E1940028A25D /* Sources */,
 				211CC2042214E1940028A25D /* Frameworks */,
 				211CC2052214E1940028A25D /* Resources */,
+				0D237D45AEA04A505FEFCCEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +188,14 @@
 				TargetAttributes = {
 					211CC2062214E1940028A25D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,18 +225,75 @@
 				211CC2152214E1950028A25D /* LaunchScreen.storyboard in Resources */,
 				211CC2122214E1950028A25D /* Assets.xcassets in Resources */,
 				211CC2102214E1940028A25D /* Main.storyboard in Resources */,
+				211CC2222214ECAF0028A25D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02F6D676F27B61F015937B5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextNow Chat App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D237D45AEA04A505FEFCCEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		211CC2032214E1940028A25D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211CC20D2214E1940028A25D /* ViewController.swift in Sources */,
-				211CC20B2214E1940028A25D /* AppDelegate.swift in Sources */,
+				2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */,
+				2171A86B221A62A7000CA3E4 /* AppDelegate.swift in Sources */,
+				2171A851221A5698000CA3E4 /* Message.swift in Sources */,
+				2171A870221A62A7000CA3E4 /* CreateAccountViewController.swift in Sources */,
+				2171A86F221A62A7000CA3E4 /* NewMessageViewController.swift in Sources */,
+				2171A86C221A62A7000CA3E4 /* SignInViewController.swift in Sources */,
+				217B093F2219042A0070DFA8 /* Extensions.swift in Sources */,
+				2171A871221A62A7000CA3E4 /* MessagesViewController.swift in Sources */,
+				217D6E7122188EF2005BADDE /* User.swift in Sources */,
+				2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */,
+				2171A872221A62A7000CA3E4 /* NewMessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +437,10 @@
 		};
 		211CC21A2214E1950028A25D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7CBBEF9B3DC46ECFAE8746 /* Pods-TextNow Chat App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TextNow Chat App/TextNow Chat App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NP8854APR4;
 				INFOPLIST_FILE = "TextNow Chat App/Info.plist";
@@ -298,8 +457,10 @@
 		};
 		211CC21B2214E1950028A25D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44A581486231B1ACB360499 /* Pods-TextNow Chat App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TextNow Chat App/TextNow Chat App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NP8854APR4;
 				INFOPLIST_FILE = "TextNow Chat App/Info.plist";
