@@ -73,4 +73,8 @@ class NewMessageViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toMessage", sender: nil)
+    }
+    
 }

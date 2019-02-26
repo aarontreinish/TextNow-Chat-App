@@ -12,7 +12,6 @@
 		211CC2122214E1950028A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2112214E1950028A25D /* Assets.xcassets */; };
 		211CC2152214E1950028A25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2132214E1950028A25D /* LaunchScreen.storyboard */; };
 		211CC2222214ECAF0028A25D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211CC2212214ECAF0028A25D /* GoogleService-Info.plist */; };
-		2171A851221A5698000CA3E4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A850221A5698000CA3E4 /* Message.swift */; };
 		2171A86B221A62A7000CA3E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A862221A62A5000CA3E4 /* AppDelegate.swift */; };
 		2171A86C221A62A7000CA3E4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A863221A62A5000CA3E4 /* SignInViewController.swift */; };
 		2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A865221A62A5000CA3E4 /* InitialViewController.swift */; };
@@ -23,6 +22,10 @@
 		2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */; };
 		217B093F2219042A0070DFA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B093E2219042A0070DFA8 /* Extensions.swift */; };
 		217D6E7122188EF2005BADDE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D6E7022188EF2005BADDE /* User.swift */; };
+		21A02CFE2224F45000C90A13 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02CFD2224F45000C90A13 /* MessageDetail.swift */; };
+		21A02D002224FF9B00C90A13 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02CFF2224FF9B00C90A13 /* ChatViewController.swift */; };
+		21A02D02222506FB00C90A13 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02D01222506FB00C90A13 /* ChatTableViewCell.swift */; };
+		21A02D042225071D00C90A13 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A02D032225071D00C90A13 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +37,6 @@
 		211CC2162214E1950028A25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211CC21E2214E5FF0028A25D /* TextNow Chat App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TextNow Chat App.entitlements"; sourceTree = "<group>"; };
 		211CC2212214ECAF0028A25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2171A850221A5698000CA3E4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2171A862221A62A5000CA3E4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2171A863221A62A5000CA3E4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2171A865221A62A5000CA3E4 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		217B093E2219042A0070DFA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		217D6E7022188EF2005BADDE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21A02CFD2224F45000C90A13 /* MessageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetail.swift; sourceTree = "<group>"; };
+		21A02CFF2224FF9B00C90A13 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		21A02D01222506FB00C90A13 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		21A02D032225071D00C90A13 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE7CBBEF9B3DC46ECFAE8746 /* Pods-TextNow Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		D44A581486231B1ACB360499 /* Pods-TextNow Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +109,7 @@
 			children = (
 				2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */,
 				2171A869221A62A6000CA3E4 /* NewMessageTableViewCell.swift */,
+				21A02D01222506FB00C90A13 /* ChatTableViewCell.swift */,
 			);
 			name = View;
 			path = "New Group";
@@ -116,6 +123,7 @@
 				2171A863221A62A5000CA3E4 /* SignInViewController.swift */,
 				2171A868221A62A6000CA3E4 /* MessagesViewController.swift */,
 				2171A866221A62A5000CA3E4 /* NewMessageViewController.swift */,
+				21A02CFF2224FF9B00C90A13 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,7 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				217D6E7022188EF2005BADDE /* User.swift */,
-				2171A850221A5698000CA3E4 /* Message.swift */,
+				21A02CFD2224F45000C90A13 /* MessageDetail.swift */,
+				21A02D032225071D00C90A13 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,15 +294,18 @@
 			files = (
 				2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */,
 				2171A86B221A62A7000CA3E4 /* AppDelegate.swift in Sources */,
-				2171A851221A5698000CA3E4 /* Message.swift in Sources */,
 				2171A870221A62A7000CA3E4 /* CreateAccountViewController.swift in Sources */,
 				2171A86F221A62A7000CA3E4 /* NewMessageViewController.swift in Sources */,
 				2171A86C221A62A7000CA3E4 /* SignInViewController.swift in Sources */,
 				217B093F2219042A0070DFA8 /* Extensions.swift in Sources */,
 				2171A871221A62A7000CA3E4 /* MessagesViewController.swift in Sources */,
 				217D6E7122188EF2005BADDE /* User.swift in Sources */,
+				21A02D002224FF9B00C90A13 /* ChatViewController.swift in Sources */,
 				2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */,
+				21A02D02222506FB00C90A13 /* ChatTableViewCell.swift in Sources */,
+				21A02CFE2224F45000C90A13 /* MessageDetail.swift in Sources */,
 				2171A872221A62A7000CA3E4 /* NewMessageTableViewCell.swift in Sources */,
+				21A02D042225071D00C90A13 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
