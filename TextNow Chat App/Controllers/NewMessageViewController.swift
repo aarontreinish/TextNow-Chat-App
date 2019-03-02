@@ -2,79 +2,86 @@
 //  NewMessageViewController.swift
 //  TextNow Chat App
 //
-//  Created by Aaron Treinish on 2/16/19.
+//  Created by Aaron Treinish on 2/14/19.
 //  Copyright © 2019 Aaron Treinish. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class NewMessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NewMessageViewController: UITableViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    let cellId = "cellId"
     
     var users = [User]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //sets up cancel button in navbar
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelNewMessage))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.navigationItem.title = "New Message"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 83/255, green: 27/255, blue: 147/255, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
+        
+        tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
         
         fetchUser()
-
     }
- 
-    @objc func cancelNewMessage() {
-        performSegue(withIdentifier: "cancelNewMessage", sender: self)
-    }
-
-
-    //fetches the user to display on tableview
+    
     func fetchUser() {
-        Database.database().reference().child("users").observe(.childAdded, with: {
-            (snapshot) in
-
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                let user = User()
-
-                user.name = dictionary["name"] as? String
-                user.email = dictionary["email"] as? String
-                user.profileImageUrl = dictionary["profileImageUrl"] as? String
+                let user = User(dictionary: dictionary)
+                user.id = snapshot.key
                 
                 self.users.append(user)
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                print(self.users)
             }
-        })
+            
+            }, withCancel: nil)
     }
     
-    //returns the amount of cells for the amount of users
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @objc func handleCancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
     
-    //displays user and there profile image
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "newMessageCell") as? NewMessageTableViewCell else { return UITableViewCell() }
-
-        let user = users[indexPath.row]
-        cell.usersLabel.text = user.name
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
-        if let profileImageUrl = user.profileImageUrl {
+        let user = users[indexPath.row]
+        cell.textLabel?.text = user.name
+        cell.detailTextLabel?.text = user.email
+        
+        if let profileImageUrl = user.profileImageUrl {            
             cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
         }
-
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toMessage", sender: nil)
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
     
+    var messagesController: MessagesViewController?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismiss(animated: true) { 
+            print("Dismiss completed")
+            let user = self.users[indexPath.row]
+            self.messagesController?.showChatControllerForUser(user: user)
+        }
+    }
+
 }

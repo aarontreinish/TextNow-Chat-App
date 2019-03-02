@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MessagesViewController.swift
 //  TextNow Chat App
 //
 //  Created by Aaron Treinish on 2/14/19.
@@ -8,17 +8,13 @@
 
 import UIKit
 import Firebase
-import ProgressHUD
 
 class MessagesViewController: UIViewController, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var messageDetail = [MessageDetail]()
-    var detail: MessageDetail!
-    var currentUser = Auth.auth().currentUser?.uid
-    var recipient: String!
-    var messageId: String!
+    var messages = [Message]()
+    var messagesDictionary = [String: Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,45 +27,85 @@ class MessagesViewController: UIViewController, UINavigationControllerDelegate, 
         
         checkIfUserIsLoggedIn()
         
-        Database.database().reference().child("users").child(currentUser!).child("messages").observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                self.messageDetail.removeAll()
-                
-                for data in snapshot {
-                    if let messageDict = data.value as? Dictionary<String, AnyObject> {
-                        let key = data.key
-                        let info = MessageDetail(messageKey: key, messageData: messageDict)
-                        
-                        self.messageDetail.append(info)
-                    }
-                }
-            }
-            self.tableView.reloadData()
-        })
+        observeUserMessages()
         
     }
+    
+    func observeUserMessages() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+
+        let ref = Database.database().reference().child("user-messages").child(uid)
+        ref.observe(.childAdded, with: {(snapshot) in
+
+            let messageId = snapshot.key
+            let messageReference = Database.database().reference().child("messages").child(messageId)
+
+            messageReference.observeSingleEvent(of: .value, with: {(snapshot) in
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    let message = Message(dictionary: dictionary)
+
+                    if let toId = message.toId {
+                        self.messagesDictionary[toId] = message
+
+                        self.messages = Array(self.messagesDictionary.values)
+                        self.messages.sort(by: { (message1, message2) -> Bool in
+
+                            return message1.timestamp!.intValue > message2.timestamp!.intValue
+                        })
+                    }
+
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }, withCancel: nil)
+
+        }, withCancel: nil)
+
+    }
+    
     
     //checks if user is already logged in
     func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser?.uid == nil {
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
         } else {
-            fetchUserAndSetUpNavBarTitle()
+            fetchUserAndSetupNavBarTitle()
         }
     }
     
     //gets the user and displays it in nav bar
-    func fetchUserAndSetUpNavBarTitle() {
-        
+    func fetchUserAndSetupNavBarTitle() {
         guard let uid = Auth.auth().currentUser?.uid else {
+            //for some reason uid = nil
             return
         }
-        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: {(snapshot) in
+        
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                self.navigationItem.title = dictionary["name"] as? String
+                
+                let user = User(dictionary: dictionary)
+                self.setupNavBarWithUser(user)
             }
-        })
+            
+        }, withCancel: nil)
+    }
+    
+    func setupNavBarWithUser(_ user: User) {
+        
+        /*BUG: Obsolete messages displayed.
+        Error occursWhen logging out and signing back in an error occurs at tableView.reloadData()
+         */
+//        messages.removeAll()
+//        messagesDictionary.removeAll()
+//        tableView.reloadData()
+//        observeUserMessages()
+        
+        
+        self.navigationItem.title = user.name
     }
     
     //Logs out user when button is pressed
@@ -78,6 +114,8 @@ class MessagesViewController: UIViewController, UINavigationControllerDelegate, 
         do {
             try Auth.auth().signOut()
             performSegue(withIdentifier: "logOut", sender: self)
+            messages.removeAll()
+            messagesDictionary.removeAll()
         } catch let logoutError {
             print(logoutError)
         }
@@ -85,46 +123,61 @@ class MessagesViewController: UIViewController, UINavigationControllerDelegate, 
         signInViewController.messagesViewController = self
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageDetail.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let messageDet = messageDetail[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell") as? MessagesTableViewCell else { return UITableViewCell() }
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell") as? MessagesTableViewCell {
-            cell.configureCell(messageDetail: messageDet)
-            
-            return cell
-        } else {
+        let message = messages[indexPath.row]
+        cell.message = message
         
-        return MessagesTableViewCell()
-        }
+        return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        recipient = messageDetail[indexPath.row].recipient
-        messageId = messageDetail[indexPath.row].messageRef.key
+        let message = messages[indexPath.row]
         
-        performSegue(withIdentifier: "toChat", sender: nil)
+        guard let chatPartnerId = message.chatPartnerId() else {
+            return
+        }
+        
+        let ref = Database.database().reference().child("users").child(chatPartnerId)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            let user = User(dictionary: dictionary)
+            user.id = chatPartnerId
+            self.showChatControllerForUser(user: user)
+            
+        }, withCancel: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationViewController = segue.destination as? ChatViewController {
-            destinationViewController.recipient = recipient
-            destinationViewController.messageId = messageId
-        }
+    func showChatControllerForUser(user: User) {
+        let chatViewController = ChatViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatViewController.user = user
+        navigationController?.pushViewController(chatViewController, animated: true)
+        
     }
+    
+    
     
     //segues to new new message view controller
     @IBAction func newMessageButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "newMessage", sender: self)
+        let newMessageViewController = NewMessageViewController()
+        newMessageViewController.messagesController = self
+        let navController = UINavigationController(rootViewController: newMessageViewController)
+        present(navController, animated: true, completion: nil)
     }
     
     

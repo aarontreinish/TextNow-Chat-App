@@ -1,0 +1,345 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcher.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcherLogging.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionFetcherService.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMSessionUploadFetcher.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/GTMSessionFetcher.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GTMDebugSelectorValidation.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/DebugUtils/GTMDebugSelectorValidation.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMDebugThreadValidation.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/DebugUtils/GTMDebugThreadValidation.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMDefines.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/GTMDefines.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMMethodCheck.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/DebugUtils/GTMMethodCheck.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMNSData+zlib.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMNSDictionary+URLArguments.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/Foundation/GTMNSDictionary+URLArguments.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMNSString+URLArguments.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/GoogleToolboxForMac/Foundation/GTMNSString+URLArguments.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/GoogleToolboxForMac.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "IQKeyboardManagerSwift-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "IQKeyboardManagerSwift-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/IQKeyboardManagerSwift.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/Pods_TextNow_Chat_App.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-TextNow Chat App-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_TextNow_Chat_App-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/Pods_TextNow_Chat_App.framework/Headers/Pods_TextNow_Chat_App-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/Pods_TextNow_Chat_App.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-TextNow Chat App.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/ProgressHUD/ProgressHUD.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ProgressHUD-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/ProgressHUD/ProgressHUD.framework/Headers/ProgressHUD-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ProgressHUD-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/ProgressHUD/ProgressHUD-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "ProgressHUD.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/ProgressHUD/ProgressHUD/ProgressHUD/ProgressHUD.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/ProgressHUD/ProgressHUD.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/ProgressHUD.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/leveldb-library/leveldb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "c.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/c.h"
+        },
+        {
+          'type': 'file',
+          'name': "cache.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/cache.h"
+        },
+        {
+          'type': 'file',
+          'name': "comparator.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/comparator.h"
+        },
+        {
+          'type': 'file',
+          'name': "db.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/db.h"
+        },
+        {
+          'type': 'file',
+          'name': "dumpfile.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/dumpfile.h"
+        },
+        {
+          'type': 'file',
+          'name': "env.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/env.h"
+        },
+        {
+          'type': 'file',
+          'name': "filter_policy.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/filter_policy.h"
+        },
+        {
+          'type': 'file',
+          'name': "iterator.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/iterator.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-library-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/leveldb-library/leveldb-library-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "options.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/options.h"
+        },
+        {
+          'type': 'file',
+          'name': "slice.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/slice.h"
+        },
+        {
+          'type': 'file',
+          'name': "status.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/status.h"
+        },
+        {
+          'type': 'file',
+          'name': "table.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/table.h"
+        },
+        {
+          'type': 'file',
+          'name': "table_builder.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/table_builder.h"
+        },
+        {
+          'type': 'file',
+          'name': "write_batch.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/leveldb-library/include/leveldb/write_batch.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/leveldb-library/leveldb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/leveldb-library.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/nanopb/nanopb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "nanopb-Swift.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "nanopb-umbrella.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/Target Support Files/nanopb/nanopb-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/nanopb/pb.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_common.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/nanopb/pb_common.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_decode.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/nanopb/pb_decode.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_encode.h",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/Pods/nanopb/pb_encode.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Products/Debug-iphoneos/nanopb/nanopb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/aarontreinish/Desktop/iOS Apps/TextNow Chat App/DerivedData/TextNow Chat App/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/nanopb.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

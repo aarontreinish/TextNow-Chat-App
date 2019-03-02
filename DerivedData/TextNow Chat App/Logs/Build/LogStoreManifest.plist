@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>31520318-9257-4FB3-BDB9-863C10A9BA78</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>31520318-9257-4FB3-BDB9-863C10A9BA78.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>TextNow Chat App project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>TextNow Chat App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build TextNow Chat App</string>
+			<key>timeStartedRecording</key>
+			<real>572981998.23838794</real>
+			<key>timeStoppedRecording</key>
+			<real>572982021.75083804</real>
+			<key>title</key>
+			<string>Build TextNow Chat App</string>
+			<key>uniqueIdentifier</key>
+			<string>31520318-9257-4FB3-BDB9-863C10A9BA78</string>
+		</dict>
+		<key>4D272682-3B95-4147-AA60-5B1D0086451E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4D272682-3B95-4147-AA60-5B1D0086451E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>TextNow Chat App project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>TextNow Chat App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build TextNow Chat App</string>
+			<key>timeStartedRecording</key>
+			<real>572982105.50601399</real>
+			<key>timeStoppedRecording</key>
+			<real>572982105.63082194</real>
+			<key>title</key>
+			<string>Build TextNow Chat App</string>
+			<key>uniqueIdentifier</key>
+			<string>4D272682-3B95-4147-AA60-5B1D0086451E</string>
+		</dict>
+		<key>587CAEE2-398E-4954-BCA7-1E37BE87F448</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>587CAEE2-398E-4954-BCA7-1E37BE87F448.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>TextNow Chat App project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>TextNow Chat App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build TextNow Chat App</string>
+			<key>timeStartedRecording</key>
+			<real>572982244.88880002</real>
+			<key>timeStoppedRecording</key>
+			<real>572982247.08970201</real>
+			<key>title</key>
+			<string>Build TextNow Chat App</string>
+			<key>uniqueIdentifier</key>
+			<string>587CAEE2-398E-4954-BCA7-1E37BE87F448</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

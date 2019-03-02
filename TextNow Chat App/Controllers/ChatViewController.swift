@@ -2,189 +2,193 @@
 //  ChatViewController.swift
 //  TextNow Chat App
 //
-//  Created by Aaron Treinish on 2/26/19.
+//  Created by Aaron Treinish on 2/14/19.
 //  Copyright © 2019 Aaron Treinish. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var messageTextField: UITextField!
+class ChatViewController: UICollectionViewController, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
-    var messageId: String!
+    var user: User? {
+        didSet {
+            navigationItem.title = user?.name
+            observeMessages()
+        }
+    }
+    
     var messages = [Message]()
-    var message: Message!
-    var currentUser = Auth.auth().currentUser?.uid
-    var recipient: String!
+    
+    func observeMessages() {
+        guard let uid = Auth.auth().currentUser?.uid, let toId = user?.id else {
+            return
+        }
+        
+        let userMessagesRef = Database.database().reference().child("user-messages").child(uid).child(toId)
+        userMessagesRef.observe(.childAdded, with: { (snapshot) in
+            
+            let messageId = snapshot.key
+            let messagesRef = Database.database().reference().child("messages").child(messageId)
+            messagesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                    return
+                }
+                
+                let message = Message(dictionary: dictionary)
+                message.setValuesForKeys(dictionary)
+                
+                if message.chatPartnerId() == self.user?.id {
+                    self.messages.append(message)
+                    
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+                }
+                
+                
+            }, withCancel: nil)
+            
+        }, withCancel: nil)
+    }
+    
+    lazy var inputTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter message..."
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
+        return textField
+    }()
+    
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView?.alwaysBounceVertical = true
+        collectionView?.register(ChatMessageCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.backgroundColor = UIColor.white
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
+        setupInputComponents()
         
-        if messageId != "" && messageId != nil {
-            loadData()
-        }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-            self.moveToBottom()
-        }
     }
     
-    @objc func keyboardWillShow(notify: NSNotification) {
-        if let keyboardSize = (notify.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
-    }
-    
-    @objc func keyboardWillHide(notify: NSNotification) {
-        if let keyboardSize = (notify.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
-            }
-        }
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let message = messages[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatMessageCollectionViewCell
+
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "message") as? ChatTableViewCell {
-            cell.configureCell(message: message)
-            
-            return cell
-        } else {
-            return ChatTableViewCell()
-        }
-    }
-    
-    func loadData() {
-        Database.database().reference().child("messages").child(messageId).observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                self.messages.removeAll()
-                for data in snapshot {
-                    if let postDict = data.value as? Dictionary<String, AnyObject> {
-                        let key = data.key
-                        let post = Message(messageKey: key, postData: postDict)
-                        self.messages.append(post)
-                    }
-                }
-            }
-            self.tableView.reloadData()
-        })
-    }
-    
-    func moveToBottom() {
-        if messages.count > 0 {
-            let indexPath = IndexPath(row: messages.count - 1, section: 0)
-            
-            tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        }
-    }
-    
-    @IBAction func sendButtonAction(_ sender: Any) {
-        dismissKeyboard()
+        let message = messages[indexPath.item]
+        cell.textView.text = message.text
         
-        if (messageTextField.text != nil && messageTextField.text != "") {
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var height: CGFloat = 80
+        
+        return CGSize(width: view.frame.width, height: height)
             
-            if messageId == nil {
-                
-                let post: Dictionary<String, AnyObject> = [
-                    "message": messageTextField.text as AnyObject,
-                    "sender": recipient as AnyObject
-                ]
-                
-                let message: Dictionary<String, AnyObject> = [
-                    "lastmessage": messageTextField.text as AnyObject,
-                    "recipient": recipient as AnyObject
-                ]
-                
-                let recipientMessage: Dictionary<String, AnyObject> = [
-                    "lastmessage": messageTextField.text as AnyObject,
-                    "recipient": currentUser as AnyObject
-                ]
-                
-                messageId = Database.database().reference().child("messages").childByAutoId().key
-                
-                let firebaseMessage = Database.database().reference().child("messages").child(messageId).childByAutoId()
-                
-                firebaseMessage.setValue(post)
-                
-                let recipentMessage = Database.database().reference().child("users").child(recipient).child("messages").child(messageId)
-                
-                recipentMessage.setValue(recipientMessage)
-                
-                let userMessage = Database.database().reference().child("users").child(currentUser!).child("messages").child(messageId)
-                
-                userMessage.setValue(message)
-                
-                loadData()
-            } else if messageId != "" {
-                
-                let post: Dictionary<String, AnyObject> = [
-                    "message": messageTextField.text as AnyObject,
-                    "sender": recipient as AnyObject
-                ]
-                
-                let message: Dictionary<String, AnyObject> = [
-                    "lastmessage": messageTextField.text as AnyObject,
-                    "recipient": recipient as AnyObject
-                ]
-                
-                let recipientMessage: Dictionary<String, AnyObject> = [
-                    "lastmessage": messageTextField.text as AnyObject,
-                    "recipient": currentUser as AnyObject
-                ]
-                
-                let firebaseMessage = Database.database().reference().child("messages").child(messageId).childByAutoId()
-                
-                firebaseMessage.setValue(post)
-                
-                let recipentMessage = Database.database().reference().child("users").child(recipient).child("messages").child(messageId)
-                
-                recipentMessage.setValue(recipientMessage)
-                
-                let userMessage = Database.database().reference().child("users").child(currentUser!).child("messages").child(messageId)
-                
-                userMessage.setValue(message)
-                
-                loadData()
+        }
+    
+    func estimateFrameForText(text: String) -> CGRect {
+        let size = CGSize(width: 200, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFontSize.advanced(by: 16)], context: nil)
+    }
+    
+    func setupInputComponents() {
+        let containerView = UIView()
+        containerView.backgroundColor = UIColor.white
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(containerView)
+        
+        
+        //x,y,w,h
+        containerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        let sendButton = UIButton(type: .system)
+        sendButton.setTitle("Send", for: UIControl.State())
+        sendButton.translatesAutoresizingMaskIntoConstraints = false
+        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
+        containerView.addSubview(sendButton)
+        //x,y,w,h
+        sendButton.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        sendButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        sendButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        sendButton.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
+        
+        containerView.addSubview(inputTextField)
+        //x,y,w,h
+        inputTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 8).isActive = true
+        inputTextField.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        inputTextField.rightAnchor.constraint(equalTo: sendButton.leftAnchor).isActive = true
+        inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
+        
+        let separatorLineView = UIView()
+        separatorLineView.backgroundColor = UIColor(red: 220, green: 220, blue: 220, alpha: 1)
+        separatorLineView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(separatorLineView)
+        //x,y,w,h
+        separatorLineView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        separatorLineView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        separatorLineView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
+        separatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    }
+    
+    @objc func handleSend() {
+        let ref = Database.database().reference().child("messages")
+        let childRef = ref.childByAutoId()
+        let toId = user!.id!
+        let fromId = Auth.auth().currentUser!.uid
+        let timestamp = Int(Date().timeIntervalSince1970)
+        let values = ["text": inputTextField.text!, "toId": toId, "fromId": fromId, "timestamp": timestamp] as [String : Any]
+        childRef.updateChildValues(values)
+        
+        childRef.updateChildValues(values) { (error, ref) in
+            if error != nil {
+                print(error)
+                return
             }
             
-            messageTextField.text = ""
+            let userMessagesRef = Database.database().reference().child("user-messages").child(fromId)
+            
+            let messageId = childRef.key
+            userMessagesRef.updateChildValues([messageId: 1])
+            
+            let recipientUserMessagesRef = Database.database().reference().child("user-messages").child(toId)
+            recipientUserMessagesRef.updateChildValues([messageId: 1])
+            
         }
-        
-        moveToBottom()
     }
     
-    
+    //press enter to send message
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        handleSend()
+        return true
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

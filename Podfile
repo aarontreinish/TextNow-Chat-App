@@ -10,5 +10,7 @@ target 'TextNow Chat App' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage','~> 4.0'
+  pod 'IQKeyboardManagerSwift'
   pod 'ProgressHUD'
+  
 end

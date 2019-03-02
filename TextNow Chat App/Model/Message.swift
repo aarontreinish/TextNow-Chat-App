@@ -2,66 +2,36 @@
 //  Message.swift
 //  TextNow Chat App
 //
-//  Created by Aaron Treinish on 2/26/19.
+//  Created by Aaron Treinish on 2/27/19.
 //  Copyright © 2019 Aaron Treinish. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
-
-class Message {
+class Message: NSObject {
     
-    private var _message: String!
+    var fromId: String?
+    var text: String?
+    var timestamp: NSNumber?
+    var toId: String?
     
-    private var _sender: String!
-    
-    private var _messageKey: String!
-    
-    private var _messageRef: DatabaseReference!
-    
-    var currentUser = Auth.auth().currentUser?.uid
-    
-    var message: String {
-        
-        return _message
+    init(dictionary: [String: Any]) {
+        self.fromId = dictionary["fromId"] as? String
+        self.text = dictionary["text"] as? String
+        self.toId = dictionary["toId"] as? String
+        self.timestamp = dictionary["timestamp"] as? NSNumber
     }
     
-    var sender: String {
+    func chatPartnerId() -> String? {
         
-        return _sender
-    }
-    
-    var messageKey: String{
+        let chatPartnerId: String?
         
-        return _messageKey
-    }
-    
-    init(message: String, sender: String) {
-        
-        _message = message
-        
-        _sender = sender
-    }
-    
-    init(messageKey: String, postData: Dictionary<String, AnyObject>) {
-        
-        _messageKey = messageKey
-        
-        if let message = postData["message"] as? String {
-            
-            _message = message
+        if fromId == Auth.auth().currentUser?.uid {
+            return toId
+        } else {
+            return fromId
         }
-        
-        if let sender = postData["sender"] as? String {
-            
-            _sender = sender
-        }
-        
-        _messageRef = Database.database().reference().child("messages").child(_messageKey)
     }
+    
 }
-
-
-
-

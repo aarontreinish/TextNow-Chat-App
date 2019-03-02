@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import ProgressHUD
 
+
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -47,7 +48,8 @@ class SignInViewController: UIViewController {
                 return
             }
             
-            self.messagesViewController.fetchUserAndSetUpNavBarTitle()
+            self.messagesViewController.fetchUserAndSetupNavBarTitle()
+            
             //successfully logged in
             ProgressHUD.showSuccess("Success")
             self.performSegue(withIdentifier: "logIn", sender: self)

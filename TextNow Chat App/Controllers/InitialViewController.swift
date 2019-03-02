@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  InitialViewController.swift
 //  TextNow Chat App
 //
 //  Created by Aaron Treinish on 2/16/19.

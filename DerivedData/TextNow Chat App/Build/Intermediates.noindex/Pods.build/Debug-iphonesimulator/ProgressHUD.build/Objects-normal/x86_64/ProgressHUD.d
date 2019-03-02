@@ -1,0 +1,5 @@
+dependencies: \
+  /Users/aarontreinish/Desktop/iOS\ Apps/TextNow\ Chat\ App/Pods/ProgressHUD/ProgressHUD/ProgressHUD/ProgressHUD.m \
+  /Users/aarontreinish/Desktop/iOS\ Apps/TextNow\ Chat\ App/DerivedData/TextNow\ Chat\ App/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/ProgressHUD.build/module.modulemap \
+  /Users/aarontreinish/Desktop/iOS\ Apps/TextNow\ Chat\ App/Pods/Target\ Support\ Files/ProgressHUD/ProgressHUD-prefix.pch \
+  /Users/aarontreinish/Desktop/iOS\ Apps/TextNow\ Chat\ App/Pods/ProgressHUD/ProgressHUD/ProgressHUD/ProgressHUD.h
