@@ -1,6 +1,8 @@
 # TextNow-Chat-App
 Sample chat app using Firebase
 
+Sending messages works, but chat bubbles still need to be implemented
+
 To use this app:
 1. Download the project file
 2. Open it in Xcode and run it on the simulator
