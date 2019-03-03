@@ -1,5 +1,5 @@
 # TextNow-Chat-App
-Sample chat app using Firebase
+Sample chat app using Swift and Firebase
 
 Sending messages works, but chat bubbles still need to be implemented
 
