@@ -147,6 +147,7 @@ class ChatViewController: UICollectionViewController, UITextFieldDelegate, UICol
         separatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    //handles updating firebase when sending a message
     @objc func handleSend() {
         let ref = Database.database().reference().child("messages")
         let childRef = ref.childByAutoId()

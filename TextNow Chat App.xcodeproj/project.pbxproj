@@ -17,13 +17,13 @@
 		2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A865221A62A5000CA3E4 /* InitialViewController.swift */; };
 		2171A870221A62A7000CA3E4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A867221A62A6000CA3E4 /* CreateAccountViewController.swift */; };
 		2171A871221A62A7000CA3E4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A868221A62A6000CA3E4 /* MessagesViewController.swift */; };
-		2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */; };
 		217B093F2219042A0070DFA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B093E2219042A0070DFA8 /* Extensions.swift */; };
 		217D6E7122188EF2005BADDE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D6E7022188EF2005BADDE /* User.swift */; };
+		218CA349222CC22C0062A362 /* ChatMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CA346222CC22C0062A362 /* ChatMessageCollectionViewCell.swift */; };
+		218CA34A222CC22C0062A362 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CA347222CC22C0062A362 /* UserCell.swift */; };
+		218CA34B222CC22C0062A362 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218CA348222CC22C0062A362 /* MessagesTableViewCell.swift */; };
 		21D8BB8B22299BBC002863FA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8BB8A22299BBC002863FA /* ChatViewController.swift */; };
 		21D8BB8D22299CEC002863FA /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8BB8C22299CEC002863FA /* NewMessageViewController.swift */; };
-		21D8BB8F2229D7BF002863FA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8BB8E2229D7BF002863FA /* UserCell.swift */; };
-		21D8BB91222A0860002863FA /* ChatMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D8BB90222A0860002863FA /* ChatMessageCollectionViewCell.swift */; };
 		3EF7CD93E44CA5CFCF2088F3 /* Pods_TextNow_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4220B49AEA4BA56FFC78D925 /* Pods_TextNow_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,13 +47,13 @@
 		2171A865221A62A5000CA3E4 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2171A867221A62A6000CA3E4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2171A868221A62A6000CA3E4 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		217B093E2219042A0070DFA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		217D6E7022188EF2005BADDE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		218CA346222CC22C0062A362 /* ChatMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		218CA347222CC22C0062A362 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		218CA348222CC22C0062A362 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		21D8BB8A22299BBC002863FA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		21D8BB8C22299CEC002863FA /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
-		21D8BB8E2229D7BF002863FA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		21D8BB90222A0860002863FA /* ChatMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4220B49AEA4BA56FFC78D925 /* Pods_TextNow_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextNow_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C559C9EDFA9822178E86BD /* Pods-TextNow Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.release.xcconfig"; sourceTree = "<group>"; };
 		EEEFC98F4542ECCA229328EB /* Pods-TextNow Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNow Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextNow Chat App/Pods-TextNow Chat App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				2171A876221A6323000CA3E4 /* Controllers */,
-				2171A874221A630B000CA3E4 /* View */,
 				217B093D221904190070DFA8 /* Helpers */,
+				218CA33F222CC1210062A362 /* View */,
 				217D6E6D22188A2C005BADDE /* Model */,
 				211CC21E2214E5FF0028A25D /* TextNow Chat App.entitlements */,
 				2171A862221A62A5000CA3E4 /* AppDelegate.swift */,
@@ -115,17 +115,6 @@
 				211CC2082214E1940028A25D /* Products */,
 			);
 			path = "TextNow Chat App";
-			sourceTree = "<group>";
-		};
-		2171A874221A630B000CA3E4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2171A86A221A62A6000CA3E4 /* MessagesTableViewCell.swift */,
-				21D8BB8E2229D7BF002863FA /* UserCell.swift */,
-				21D8BB90222A0860002863FA /* ChatMessageCollectionViewCell.swift */,
-			);
-			name = View;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2171A876221A6323000CA3E4 /* Controllers */ = {
@@ -156,6 +145,16 @@
 				211A436D2227884F001C483A /* Message.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		218CA33F222CC1210062A362 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				218CA346222CC22C0062A362 /* ChatMessageCollectionViewCell.swift */,
+				218CA348222CC22C0062A362 /* MessagesTableViewCell.swift */,
+				218CA347222CC22C0062A362 /* UserCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		82C58AB40E812AF6E629715B /* Frameworks */ = {
@@ -306,14 +305,14 @@
 				2171A86E221A62A7000CA3E4 /* InitialViewController.swift in Sources */,
 				2171A86B221A62A7000CA3E4 /* AppDelegate.swift in Sources */,
 				2171A870221A62A7000CA3E4 /* CreateAccountViewController.swift in Sources */,
+				218CA34B222CC22C0062A362 /* MessagesTableViewCell.swift in Sources */,
 				2171A86C221A62A7000CA3E4 /* SignInViewController.swift in Sources */,
 				217B093F2219042A0070DFA8 /* Extensions.swift in Sources */,
 				2171A871221A62A7000CA3E4 /* MessagesViewController.swift in Sources */,
+				218CA349222CC22C0062A362 /* ChatMessageCollectionViewCell.swift in Sources */,
 				217D6E7122188EF2005BADDE /* User.swift in Sources */,
+				218CA34A222CC22C0062A362 /* UserCell.swift in Sources */,
 				21D8BB8B22299BBC002863FA /* ChatViewController.swift in Sources */,
-				21D8BB8F2229D7BF002863FA /* UserCell.swift in Sources */,
-				21D8BB91222A0860002863FA /* ChatMessageCollectionViewCell.swift in Sources */,
-				2171A873221A62A7000CA3E4 /* MessagesTableViewCell.swift in Sources */,
 				21D8BB8D22299CEC002863FA /* NewMessageViewController.swift in Sources */,
 				211A436E2227884F001C483A /* Message.swift in Sources */,
 			);
